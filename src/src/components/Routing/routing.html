@@ -1,0 +1,38 @@
+<div>
+
+  <h1 class="mb-4">Example routing</h1>
+
+  <div>
+    <p>
+      import Home from 'components/Home/home';<br/> 
+      import Contact from 'components/Contact/contact';<br/> 
+      import NotFound from 'components/NotFound/notFound';<br/>
+      <br/> 
+      const routes = [<br/> {
+      <br/> 
+      path: '/',<br/> 
+      component: Home<br/> 
+      },<br/> 
+      {<br/> 
+      path: '/contact',<br/> 
+      component: Contact<br/>
+      },<br/> 
+      {<br/> 
+      path: '*',<br/> 
+      component: NotFound<br/> 
+      }<br/> 
+      ];<br/>
+      <br/> 
+      export default routes;<br/>
+    </p>
+  </div>
+  
+  hyperlinks to the routes
+  
+  <p>
+  &lt;router-link class="nav-item" tag="li" to="/home" exact&gt;<br/> 
+  &lt;a class="nav-link"&gt;&lt;i class="fa fa-file-text-o"&gt;&lt;/i&gt; Home&lt;/a&gt;<br/> 
+  &lt;/router-link&gt;
+  </p>
+  
+</div>
