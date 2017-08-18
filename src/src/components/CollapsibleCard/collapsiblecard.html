@@ -1,0 +1,20 @@
+<div class="card card-outline-primary">
+  <div class="card-block">
+    <h3 class="card-title">
+      <slot name="title"></slot>
+    </h3>
+    <div class="card-text">
+      {{more}} {{cssmore}}
+      <slot name="body"></slot>
+      <div ref="more" >
+        <div >
+          <slot name="more" ref="more"></slot>
+        </div>
+      </div>
+    </div>
+    <div v-if="more">
+      <a v-if="showmore" v-on:click="togglemore()">more</a>
+      <a v-if="!showmore" v-on:click="togglemore()">less</a>
+    </div>
+  </div>
+</div>

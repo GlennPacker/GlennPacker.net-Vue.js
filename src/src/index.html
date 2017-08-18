@@ -29,7 +29,7 @@
       <a class="cd-3d-nav-trigger" v-on:click="toggleMenu">Menu<span></span></a>
     </header>
 
-    <main v-bind:class="{ 'nav-is-visible': showMenu }">
+    <main v-bind:class="{ 'nav-is-visible': showMenu }" class="container">
       <loader v-show="isLoading"></loader>
       <router-view></router-view>
     </main>
@@ -41,9 +41,6 @@
         <router-link tag="li" to="/contact" exact><a class="nav-link" ><i class="fa fa-envelope-o"></i> Contact</a></router-link>
       </ul>
     </nav>
-
   </div>
-
 </body>
-
 </html>
