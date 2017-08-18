@@ -2,7 +2,6 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import { LoadingState } from 'src/config/loading-state';
-import Navigation from 'components/Navigation/navigation';
 import Loader from 'components/Loader/loader';
 
 Vue.use(VueRouter);
@@ -14,22 +13,29 @@ import 'src/style.scss';
 export const router = new VueRouter({
   routes,
   mode: 'history',
-  linkActiveClass: 'active'
+  linkActiveClass: 'cd-selected'
 });
 
 new Vue({
   router,
   components: {
-    Navigation,
     Loader
   },
-
   data(){
     return {
-      isLoading: false
+      isLoading: false,
+      showMenu: false
     };
   },
-
+  
+  methods: {
+    toggleMenu(){
+      console.log(this.showMenu);
+      this.showMenu = !this.showMenu;
+      console.log(this.showMenu);
+    }
+  },
+  
   created(){
     LoadingState.$on('toggle', (isLoading) => {
       this.isLoading = isLoading;
