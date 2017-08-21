@@ -3,77 +3,24 @@
   <h1 class="mb-4">GlennPacker.net Vue.js</h1>
 
   <div class="row">
-    <div class="col-md-6">
-      <collapsiblecard>
-        <div slot="title">
-          Install and Quick Start
-        </div>
-
-        <div slot="body">
-          <p>Download Vue Javascript from<br/>
-            <a href="https://unpkg.com/vue">https://unpkg.com/vue</a> <br/>
-          </p>
-          <p>
-            As a script tag<br/> &lt;script type="text/javascript" src="https://unpkg.com/vue"&gt;&lt;/script&gt;
-          </p>
-          <p>
-            A great quick start project with lots of extras is found on <a href="https://github.com/villeristi/vue.js-starter-template">git hub </a>. This project comes with:
-            <ul>
-              <li><a href="https://github.com/vuejs/vue">Vue.js 2</a></li>
-              <li><a href="https://github.com/vuejs/vue-router">Vue Router 2</a></li>
-              <li><a href="https://github.com/mzabriskie/axios">Axios</a></li>
-              <li><a href="https://github.com/daneden/animate.css">Animate.css</a></li>
-              <li><a href="https://babeljs.io/">Babel</a></li>
-              <li><a href="https://v4-alpha.getbootstrap.com/">Bootstrap 4</a></li>
-              <li><a href="https://www.browsersync.io/">BrowserSync</a></li>
-              <li><a href="http://eslint.org/">ESLint</a></li>
-              <li><a href="http://fontawesome.io/">Font Awesome</a></li>
-              <li><a href="http://jsonplaceholder.typicode.com/">JSONPlaceholder</a></li>
-              <li><a href="http://sass-lang.com/">SASS</a></li>
-              <li><a href="https://webpack.js.org/">Webpack 2</a></li>
-              <li><a href="https://yarnpkg.com/en/docs/install">Yarn</a></li>
-            </ul>
-          </p>
-        </div>
-      </collapsiblecard>
+    <div class="col-md-2">
+      <div class="nav flex-column nav-pills">
+          <a class="nav-link" v-bind:class="{ active: page == 'install' }" v-on:click="page = 'install'">Installation &amp; Starting</a>
+          <a class="nav-link" v-bind:class="{ active: page == 'axios' }" v-on:click="page = 'axios'">Axios</a>
+          <a class="nav-link" v-bind:class="{ active: page == 'routing' }" v-on:click="page = 'routing'">Routing</a>
+          <a class="nav-link" v-bind:class="{ active: page == 'templates' }" v-on:click="page = 'templates'">Templates</a>
+      </div>
     </div>
-
-    <div class="col-md-6">
-      <collapsiblecard>
-        <div slot="title">
-          Axios (Http and Api Calls)
+    <div class="col-md-10">
+      <div v-if="page == 'install'">
+            <install></install>
+      </div>
+      <div v-if="page == 'axios'">
+            <axios></axios>
         </div>
-
-        <div slot="body">
-          <p>A simple to use library for making http calls<br/>
-            <a href="https://github.com/mzabriskie/axios">https://github.com/mzabriskie/axios</a><br/>
-          </p>
-          <p>
-            As a script tag<br/> &lt;script type="text/javascript" src="https://unpkg.com/vue"&gt;&lt;/script&gt;
-          </p>
-        </div>
-        <div slot="more">
-          <p>
-            A great quick start project with lots of extras is found on <a href="https://github.com/villeristi/vue.js-starter-template">git hub </a>. This project comes with:</p>
-            <ul>
-              <li><a href="https://github.com/vuejs/vue">Vue.js 2</a></li>
-              <li><a href="https://github.com/vuejs/vue-router">Vue Router 2</a></li>
-              <li><a href="https://github.com/mzabriskie/axios">Axios</a></li>
-              <li><a href="https://github.com/daneden/animate.css">Animate.css</a></li>
-              <li><a href="https://babeljs.io/">Babel</a></li>
-              <li><a href="https://v4-alpha.getbootstrap.com/">Bootstrap 4</a></li>
-              <li><a href="https://www.browsersync.io/">BrowserSync</a></li>
-              <li><a href="http://eslint.org/">ESLint</a></li>
-              <li><a href="http://fontawesome.io/">Font Awesome</a></li>
-              <li><a href="http://jsonplaceholder.typicode.com/">JSONPlaceholder</a></li>
-              <li><a href="http://sass-lang.com/">SASS</a></li>
-              <li><a href="https://webpack.js.org/">Webpack 2</a></li>
-              <li><a href="https://yarnpkg.com/en/docs/install">Yarn</a></li>
-            </ul>
-        </div>
-      </collapsiblecard>
     </div>
-
+  </div>
+ 
 
     <div class="card card-outline-primary col-md-5">
       <div class="card-block">
@@ -117,7 +64,7 @@
             As a script tag<br/> &lt;script type="text/javascript" src="https://unpkg.com/vue"&gt;&lt;/script&gt;
           </p>
           <p>
-            A great quick start project with lots of extras is found on <a href="https://github.com/villeristi/vue.js-starter-template">git hub </a>. This project comes with:
+            A great quick start project with lots of extras is found on <a href="https://github.com/villeristi/vue.js-starter-template">git hub </a>. This project comes with:</p>
             <ul>
               <li><a href="https://github.com/vuejs/vue">Vue.js 2</a></li>
               <li><a href="https://github.com/vuejs/vue-router">Vue Router 2</a></li>
@@ -133,7 +80,7 @@
               <li><a href="https://webpack.js.org/">Webpack 2</a></li>
               <li><a href="https://yarnpkg.com/en/docs/install">Yarn</a></li>
             </ul>
-          </p>
+          
         </div>
       </div>
     </div>
@@ -142,19 +89,6 @@
 
 
 
-  Starter project
-  <p> A great little starter project with routing, Axios and bootstrap amoungst others already in place.</p>
 
-
-  Axios for Api/Http calls &lt;script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt;
-  <p>A simple to use library for making http calls</p>
-
-  Sample code
-  <router-link class="nav-item" tag="li" to="/routing" exact>
-    <a class="nav-link"><i class="fa fa-file-text-o"></i> Routing</a>
-  </router-link>
-  <router-link class="nav-item" tag="li" to="/component" exact>
-    <a class="nav-link"><i class="fa fa-file-text-o"></i> Component</a>
-  </router-link>
 
 </div>
