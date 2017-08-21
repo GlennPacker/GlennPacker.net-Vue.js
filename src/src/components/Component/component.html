@@ -1,14 +1,44 @@
 <div>
-
-  <h1 class="mb-4">GlennPacker.net Vue.js</h1>
-
-  <p>This website is a demo of using Vue.js and uses the Vue.js framework. Glenn first used the Vue Js framework while in contract for Lumesse in April 2017</p>
-  <p>Glenn Packer is a freelance contractor, working as a full-stack developer with experience in many different Industry sectors.</p>
-  <p>Based in Sussex, Glenn is available for any length of contract, anywhere in the UK or Europe.</p>
+  <h3>Components</h3>
+    <p>
+      The basic component
+    </p>
+    <p>
+      import Vue from 'vue';<br/> 
+      import template from './template.html';<br/>
+      <br/> 
+      export default Vue.extend({<br/> 
+      &nbsp;  template,<br/>
+      });
+    </p>
+    <p>
+      The template should be the html for the view/partial with a single root html element often a div.
+    </p>
   
-  <blockquote class="blockquote">
-      <p>"Vue provides an answer to the issue of JavaScript fatigue, and it is a worthy successor to the legacy of jQuery"</p>
-      <footer>Peter Jang - Dean of instruction at Actualize</footer>
-  </blockquote>
+  <h4>Component With data and methods</h4>
+  <p>
+    import Vue from 'vue';<br/>
+    import template from './template.html';<br/>
+    <br/>
+    export default Vue.extend({<br/>
+    &nbsp;  template,<br/>
+    <br/>
+    &nbsp;  data(){<br/>
+    &nbsp;  &nbsp;  return {<br/>
+    &nbsp;  &nbsp;  &nbsp;  message: 'hi'<br/>
+    &nbsp;  &nbsp;  };<br/>
+    &nbsp;  },<br/>
+    <br/>
+    &nbsp;  methods:{<br/>
+    &nbsp;  &nbsp;  talk(){<br/>
+    &nbsp;  &nbsp;  &nbsp;  console.write(this.message);<br/>
+    &nbsp;  &nbsp;  }<br/>
+    &nbsp;  }<br/>
+  });<br/>
+  </p>
+  
+  <p> There are many built in methods/funcitons built in  (including computed, lifecycle handling), full docuemntation is found on the Vue JS website. 
+  </p>
+
 
 </div>

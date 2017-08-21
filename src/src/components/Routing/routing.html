@@ -1,6 +1,6 @@
 <div>
 
-  <h1 class="mb-4">Example routing</h1>
+  <h3 >Vue JS - Example routing</h3>
 
   <div>
     <p>
@@ -8,30 +8,29 @@
       import Contact from 'components/Contact/contact';<br/> 
       import NotFound from 'components/NotFound/notFound';<br/>
       <br/> 
-      const routes = [<br/> {
-      <br/> 
-      path: '/',<br/> 
-      component: Home<br/> 
-      },<br/> 
-      {<br/> 
-      path: '/contact',<br/> 
-      component: Contact<br/>
-      },<br/> 
-      {<br/> 
-      path: '*',<br/> 
-      component: NotFound<br/> 
-      }<br/> 
+      const routes = [<br/>
+      &nbsp; {<br/>
+      &nbsp;  &nbsp;  path: '/',<br/> 
+      &nbsp;  &nbsp;  component: Home<br/> 
+      &nbsp;  },<br/> 
+      &nbsp;  {<br/> 
+      &nbsp;  &nbsp;  path: '/contact',<br/> 
+      &nbsp;  &nbsp;  component: Contact<br/>
+      &nbsp;  },<br/> 
+      &nbsp;  {<br/> 
+      &nbsp;  &nbsp;  path: '*',<br/> 
+      &nbsp;  &nbsp;  component: NotFound<br/> 
+      &nbsp;  }<br/> 
       ];<br/>
-      <br/> 
       export default routes;<br/>
     </p>
   </div>
   
-  hyperlinks to the routes
+  <h4>hyperlinks to the routes</h4>
   
   <p>
-  &lt;router-link class="nav-item" tag="li" to="/home" exact&gt;<br/> 
-  &lt;a class="nav-link"&gt;&lt;i class="fa fa-file-text-o"&gt;&lt;/i&gt; Home&lt;/a&gt;<br/> 
+  &lt;router-link tag="li" to="/home" exact&gt;<br/> 
+  &nbsp;  &lt;a&gt; Home&lt;/a&gt;<br/> 
   &lt;/router-link&gt;
   </p>
   
