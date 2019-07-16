@@ -1,5 +1,5 @@
 <template>
-  <v-container layout row>
+  <v-container layout column>
     <h3>Vue JS</h3>
     <p>
       Vue.js is a javascript framework commonly referred to as Vue. The framework was originally created after a fall out over Angular 2. The framework bosts the faster response times
