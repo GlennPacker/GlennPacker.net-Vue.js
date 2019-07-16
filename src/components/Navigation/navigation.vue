@@ -68,7 +68,28 @@ export default {
             { title: "Basics", icon: "recent_actors", route: "vue" },
             { title: "Component", icon: "view_carousel", route: "component" },
             { title: "Routing", icon: "navigation", route: "routing" },
-            { title: "Axios", icon: "kitchen", route: "axios" }
+            {
+              title: "Event Bus",
+              icon: "fa-bus",
+              route: "eventBus"
+            },
+            { title: "Axios", icon: "kitchen", route: "axios" },
+            { title: "Cheat Sheet", icon: "check", route: "cheatSheet" },
+            {
+              title: "Vuex Setup",
+              icon: "fa-battery-empty",
+              route: "vuexSetup"
+            },
+            {
+              title: "Vuex Actions",
+              icon: "fa-battery-half",
+              route: "vuexActions"
+            },
+            {
+              title: "Vuex Getters",
+              icon: "fa-battery-full",
+              route: "vuexGetters"
+            }
           ]
         },
         { title: "Contact", icon: "mail_outline", route: "contact" }

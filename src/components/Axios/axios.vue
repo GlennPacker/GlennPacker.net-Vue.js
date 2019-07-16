@@ -75,11 +75,7 @@
 	</div>
 </template>
 <script>
-import technav from '../TechNav/techNav';
 export default {
 	name: 'axios',
-	components: {
-		technav
-	}
 }
 </script>

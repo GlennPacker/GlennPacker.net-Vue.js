@@ -1,13 +1,18 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./components/Home/home";
+import CheatSheet from "./components/CheatSheet/cheatSheet";
 import Client from "./components/Client/client";
 import Contact from "./components/Contact/contact";
-import VueBasics from "./components/VueBasics/VueBasics";
+import EventBus from "./components/EventBus/eventBus";
 import routing from "./components/Routing/routing";
 import componentbasics from "./components/ComponentBasics/componentBasics";
 import axios from "./components/Axios/axios";
 import NotFound from "./components/NotFound/notFound";
+import VueBasics from "./components/VueBasics/VueBasics";
+import VuexActions from "./components/Vuex/vuexActions";
+import VuexGetters from "./components/Vuex/vuexGetters";
+import VuexSetup from "./components/VuexSetup/vuexSetup";
 
 Vue.use(Router);
 
@@ -23,6 +28,11 @@ export default new Router({
       component: axios
     },
     {
+      name: "cheatSheet",
+      path: "/cheat-sheet",
+      component: CheatSheet
+    },
+    {
       name: "contact",
       path: "/contact",
       component: Contact
@@ -31,6 +41,11 @@ export default new Router({
       name: "clients",
       path: "/clients",
       component: Client
+    },
+    {
+      name: "eventBus",
+      path: "/event-bus",
+      component: EventBus
     },
     {
       name: "routing",
@@ -46,6 +61,21 @@ export default new Router({
       name: "vue",
       path: "/vue",
       component: VueBasics
+    },
+    {
+      name: "vuexActions",
+      path: "/vuex-actions",
+      component: VuexActions
+    },
+    {
+      name: "vuexGetters",
+      path: "/vuex-getters",
+      component: VuexGetters
+    },
+    {
+      name: "vuexSetup",
+      path: "/vuex-setup",
+      component: VuexSetup
     },
     {
       path: "*",
