@@ -8,7 +8,7 @@ const _3df53d0e = () => interopDefault(import('..\\pages\\client.vue' /* webpack
 const _dfc65026 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages_contact" */))
 const _6e5bea89 = () => interopDefault(import('..\\pages\\eventBus.vue' /* webpackChunkName: "pages_eventBus" */))
 const _10a25193 = () => interopDefault(import('..\\pages\\routing.vue' /* webpackChunkName: "pages_routing" */))
-const _a488cfd0 = () => interopDefault(import('..\\pages\\VueBasics.vue' /* webpackChunkName: "pages_VueBasics" */))
+const _7e1c6838 = () => interopDefault(import('..\\pages\\vueBasics.vue' /* webpackChunkName: "pages_vueBasics" */))
 const _e30cfe90 = () => interopDefault(import('..\\pages\\vuexActions.vue' /* webpackChunkName: "pages_vuexActions" */))
 const _60ea9303 = () => interopDefault(import('..\\pages\\vuexGetters.vue' /* webpackChunkName: "pages_vuexGetters" */))
 const _c0058210 = () => interopDefault(import('..\\pages\\vuexSetup.vue' /* webpackChunkName: "pages_vuexSetup" */))
@@ -113,9 +113,9 @@ export function createRouter() {
       component: _10a25193,
       name: "routing"
     }, {
-      path: "/VueBasics",
-      component: _a488cfd0,
-      name: "VueBasics"
+      path: "/vueBasics",
+      component: _7e1c6838,
+      name: "vueBasics"
     }, {
       path: "/vuexActions",
       component: _e30cfe90,

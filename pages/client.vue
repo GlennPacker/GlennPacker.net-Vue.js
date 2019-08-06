@@ -3,60 +3,37 @@
     <h3 style="padding-bottom: 25px;">Clients using Vue JS</h3>
 
     <v-layout row wrap>
-      <panel color="#ff711e">
-        <div slot="header">Branthill Computing</div>
-        <div
-          slot="main"
-        >Green field application development for inventory Management, forecasting, demand planning and inventory control</div>
-        <div slot="additional">
-          <ul mb-3>
-            <li>Agile</li>
-            <li>Back End</li>
-            <li>SQL Server</li>
-            <li>Front end</li>
-            <li>Vue JS, JSON, CSS, JavaScript</li>
-            <li>TDD - Test Driven Development</li>
-            <li>Jest</li>
-          </ul>
-          <p>
-            <span>Apr 2018 - Apr 2019</span>
-          </p>
-        </div>
-      </panel>
-
-      <panel color="#ffe11e">
-        <div slot="header">Airops Software</div>
-        <div slot="main">Aviation management system for aircraft operators and brokers.</div>
-        <div slot="additional">
-          <ul mb-3>
-            <li>Agile</li>
-            <li>Back End</li>
-            <li>Web Api, SQL Server, Dapper, Entity Framework</li>
-            <li>Front end</li>
-            <li>Vue JS, JSON, Vuetify, ag-Grid, CSS, JavaScript</li>
-            <li>TDD - Test Driven Development</li>
-            <li>Nunit, MOQ, Jest, Jasmine</li>
-          </ul>
-          <p>
-            <span>Aug -March 2018</span>
-          </p>
-        </div>
-      </panel>
-
-      <panel color="#c71eff">
-        <div slot="header">Lummesse</div>
-        <div slot="main">Front end development for the Sony, Panasonic and Ey Learning portals.</div>
+      <panel :color="panelColors[8-(index%9)]" v-for="(client, index) in vueClients" :key="index">
+        <div slot="header">{{client.name}}</div>
+        <div slot="main">{{client.summary}}</div>
         <div slot="additional">
           <ul>
-            <li>Front end</li>
-            <li>
-              JavaScript,
-              <a href="http://vuejs.glennpacker.net/" target="_blank">Vue Js</a>, CSS, HTML 5, Node JS, jQuery
-            </li>
+            <dt>Agile</dt>
+            <template v-if="hasBackEnd(client)">
+              <dt>Back End Technologies</dt>
+              <dd>
+                <span v-for="beTech in backEndLinks(client)" :key="beTech.text">
+                  <a :href="beTech.link">{{beTech.text}}</a>,
+                </span>
+                <template v-if="backEndItems(client)">{{ backEndItems(client) }}</template>
+              </dd>
+            </template>
+            <template v-if="hasFrontEnd(client)">
+              <dt>Front End Technologies</dt>
+              <dd>
+                <span v-for="tech in frontEndLinks(client)" :key="tech.text">
+                  <a :href="tech.link">{{tech.text}}</a>,
+                </span>
+                <template v-if="frontEndItems(client)">{{ frontEndItems(client) }}</template>
+              </dd>
+            </template>
+            <template v-if="client.testTech">
+              <dt>TDD / Test</dt>
+              <dd>{{client.testTech.join(', ')}}</dd>
+            </template>
           </ul>
-          <p>
-            <span>April -May 2017</span>
-          </p>
+
+          <p>{{client.when}}</p>
         </div>
       </panel>
     </v-layout>
@@ -64,214 +41,37 @@
     <h3 style="padding: 25px 0;">All Recent Clients</h3>
 
     <v-layout row wrap>
-      <panel color="#c71eff">
-        <div slot="header">Hastings Direct</div>
-        <div slot="main">Application development for the insurance industry.</div>
-        <div slot="additional">
-          <ul mb-3>
-            <li>Front end</li>
-            <li>Angular JS, JSON, CSS, JavaScript</li>
-            <li>TDD - Test Driven Development</li>
-            <li>Jest</li>
-          </ul>
-          <p>
-            <span>Apr 2019 - Jul 2019</span>
-          </p>
-        </div>
-      </panel>
-
-      <panel color="#ff711e">
-        <div slot="header">Branthill Computing</div>
-        <div
-          slot="main"
-        >Green field application development for inventory Management, forecasting, demand planning and inventory control</div>
-        <div slot="additional">
-          <ul mb-3>
-            <li>Agile</li>
-            <li>Back End</li>
-            <li>SQL Server</li>
-            <li>Front end</li>
-            <li>Vue JS, JSON, CSS, JavaScript</li>
-            <li>TDD - Test Driven Development</li>
-            <li>Jest</li>
-          </ul>
-          <p>
-            <span>Apr 2018 - Apr 2019</span>
-          </p>
-        </div>
-      </panel>
-
-      <panel color="#ffe11e">
-        <div slot="header">Airops Software</div>
-        <div slot="main">Aviation management system for aircraft operators and brokers.</div>
+      <panel :color="panelColors[index%9]" v-for="(client, index) in clients" :key="index">
+        <div slot="header">{{client.name}}</div>
+        <div slot="main">{{client.summary}}</div>
         <div slot="additional">
           <ul>
             <dt>Agile</dt>
-            <dt>Back End</dt>
-            <dd>Web Api, SQL Server, Dapper, Entity Framework</dd>
-            <dt>Front end</dt>
-            <dd>Vue JS, JSON, Vuetify, ag-Grid, CSS, JavaScript</dd>
-            <dt>TDD - Test Driven Development</dt>
-            <dd>Nunit, MOQ, Jest, Jasmine</dd>
-          </ul>
-          <p>
-            <span>Aug -March 2018</span>
-          </p>
-        </div>
-      </panel>
-
-      <panel color="#ffe11e">
-        <div slot="header">Telephonica</div>
-        <div
-          slot="main"
-        >Make a single tenant application suitable for multiple clients with a variety of client specific options</div>
-        <div slot="additional">
-          <ul>
-            <dt>Agile</dt>
-            <dt>Back End</dt>
-            <dd>Web Api, Dynamo DB, Autofac, Fluent Validations, Express Mapper, NLog</dd>
-            <dt>Front end</dt>
-            <dd>Angular JS, JSON, CSS, LESS, Bootstrap, HTML 5, JavaScript</dd>
-            <dt>TDD - Test Driven Development</dt>
-            <dd>MS Test, MOQ, Jasmine</dd>
-          </ul>
-
-          <p>
-            <span>June -Aug 2017</span>
-          </p>
-        </div>
-      </panel>
-
-      <panel color="#c71eff">
-        <div slot="header">Lummesse</div>
-        <div slot="main">Front end development for the Sony, Panasonic and Ey Learning portals</div>
-        <div slot="additional">
-          <ul>
-            <dt>Front end</dt>
-            <dd>JavaScript, Vue Js, CSS, HTML 5, Node JS, jQuery</dd>
-          </ul>
-          <p>April -May 2017</p>
-        </div>
-      </panel>
-
-      <panel color="#ff711e">
-        <div slot="header">Airbus Space and Defense</div>
-        <div slot="main">Full stack development on satelite measurement and recording</div>
-        <div slot="additional">
-          <ul>
-            <dt>Agile</dt>
-            <dt>Back End Technologies</dt>
-            <dd>C#, ASP.net, MVC, SQL, Server, Web Api, Dapper, XML, Master Data Services, Entity Framework</dd>
-            <dt>Front End Technologies</dt>
-            <dd></dd>
-            <dd>Razor, TypeScript, JavaScript, JQuery, Bootstrap, Kendo</dd>
-            <dt>TDD - Test Driven Development</dt>
-            <dd>MS Test, MOQ, Jasmine</dd>
-          </ul>
-          <p>Feb – April 2017</p>
-        </div>
-      </panel>
-
-      <panel color="#ff711e">
-        <div slot="header">Saga</div>
-        <div slot="main">Insurance renewals, Holiday Insurance and Data viewer</div>
-        <div slot="additional">
-          <div>
-            <ul>
-              <dt>Agile</dt>
+            <template v-if="hasBackEnd(client)">
               <dt>Back End Technologies</dt>
-              <dd>C#, Oracle, ASP.net MVC, SQL Server, Ninject, Web Api, Dapper, ASP.NET web forms, XML, Console Applications</dd>
+              <dd>
+                <span v-for="beTech in backEndLinks(client)" :key="beTech.text">
+                  <a :href="beTech.link">{{beTech.text}}</a>,
+                </span>
+                <template v-if="backEndItems(client)">{{ backEndItems(client) }}</template>
+              </dd>
+            </template>
+            <template v-if="hasFrontEnd(client)">
               <dt>Front End Technologies</dt>
-              <dd>HTML 5, Bootstrap, Razor, LESS, CSS, Angular JS, JavaScript, jQuery, JSON</dd>
-              <dt>TDD - Test Driven Development</dt>
-              <dd>nUnit, MOQ, Jasmine</dd>
-            </ul>
-          </div>
-          <p>March 2016 – Jan 2017 (Extended)</p>
-        </div>
-      </panel>
-
-      <panel color="#ffe11e">
-        <div slot="header">Access Group</div>
-        <div
-          slot="main"
-        >Adding new features into a scheduling system for the care industry (Mail Merge, APIs and data exports)</div>
-        <div slot="additional">
-          <ul>
-            <dt>Agile</dt>
-            <dt>Back End Technologies</dt>
-            <dd>VB.net, Asp.net Web Forms, SQL Server, Stored Procedures, SQL/TSQL, XML</dd>
-            <dt>Front End Technologies</dt>
-            <dd>Angular JS</dd>
+              <dd>
+                <span v-for="tech in frontEndLinks(client)" :key="tech.text">
+                  <a :href="tech.link">{{tech.text}}</a>,
+                </span>
+                <template v-if="frontEndItems(client)">{{ frontEndItems(client) }}</template>
+              </dd>
+            </template>
+            <template v-if="client.testTech">
+              <dt>TDD / Test</dt>
+              <dd>{{client.testTech.join(', ')}}</dd>
+            </template>
           </ul>
 
-          <p>Nov 2015 – March 2016</p>
-        </div>
-      </panel>
-
-      <panel color="#c71eff">
-        <div slot="header">BeValued</div>
-        <div
-          slot="main"
-        >Design and development of a fitting centre portal for the insurance claims industry.</div>
-        <div slot="additional">
-          <ul>
-            <dt>Agile</dt>
-            <dt>Back End Technologies</dt>
-            <dd>VB.net, Asp.net Web Forms, SQL Server, Stored Procedures, SQL/TSQL, XML</dd>
-            <dt>Front End Technologies</dt>
-            <dd>Angular JS</dd>
-          </ul>
-          <p>April 2014 – Nov 2015</p>
-        </div>
-      </panel>
-
-      <panel color="#c71eff">
-        <div slot="header">Smith &amp; Ouzman</div>
-        <div slot="main">Design and development of a security printing application.</div>
-        <div slot="additional">
-          <ul>
-            <dt>Agile</dt>
-            <dt>Back End Technologies</dt>
-            <dd>ASP.NET MVC 3 &amp; 4, SQL Server, TSQL/SQL, Stored Procedures, C#, WCF, Entity Framework, MVCMailer, Unity</dd>
-            <dt>Front End Technologies</dt>
-            <dd>HTML, jQuery, JavaScript, CSS, AJAX, JSON, Razor</dd>
-            <dt>TDD</dt>
-            <dd>nUnit, Fake It Easy, Ms Test</dd>
-          </ul>
-
-          <p>April 2013– April 2014</p>
-        </div>
-      </panel>
-
-      <panel color="#ff711e">
-        <div slot="header">Darwin Consultants</div>
-        <div slot="main">SQL Reporting Services, Web Developer and Winforms</div>
-        <div slot="additional">
-          <ul>
-            <dt>Technologies</dt>
-            <dd>
-              ASP.NET Web Forms,
-              HTML,
-              SQL Reporting services,
-              Crystal Reports,
-              SQL Server,
-              TSQL/SQL,
-              Stored Procedures,
-              jQuery,
-              JavaScript,
-              CSS,
-              VB.NET,
-              Classic ASP,
-              IIS,
-              VB script,
-              WCF,
-              SVN,
-              SSIS
-            </dd>
-          </ul>
-
-          <p>May 2012– March 2013</p>
+          <p>{{client.when}}</p>
         </div>
       </panel>
     </v-layout>
@@ -298,6 +98,17 @@ export default {
   },
   data() {
     return {
+      panelColors: [
+        "#ff711e",
+        "#ffe11e",
+        "#c71eff",
+        "#ffe11e",
+        "#c71eff",
+        "#ff711e",
+        "#c71eff",
+        "#ff711e",
+        "#ffe11e"
+      ],
       vs: {
         showC1: false,
         showC2: false,
@@ -311,8 +122,287 @@ export default {
           showC8: false,
           showC9: false
         }
-      }
+      },
+      clients: [
+        {
+          name: "Hastings Direct",
+          jobTitle: "Full Stack Developer",
+          when: "May 2019 - Present",
+          summary: "Application development for the insurance industry.",
+          projectStyle: "Agile",
+          testTech: ["Jest"],
+          technologies: [
+            {
+              text: "Angular",
+              isBackEnd: false,
+              link: "//angular.glennpacker.net"
+            },
+            { isBackEnd: false, text: "JSON" }
+          ]
+        },
+        {
+          name: "Branthill Computing",
+          jobTitle: "Front End Developer",
+          when: "Apr 2018 - Apr 2019",
+          summary:
+            "Green field application development for inventory Management, forecasting, demand planning and inventory control",
+          projectStyle: "Agile",
+          testTech: ["Jest"],
+          technologies: [
+            { text: "Vue Js", isBackEnd: false, link: "vuejs.glennpacker.net" },
+            { isBackEnd: false, text: "JSON" },
+            { isBackEnd: true, text: "SQL" }
+          ]
+        },
+        {
+          name: "Airops Software",
+          jobTitle: "Full Stack Developer",
+          when: "Aug 2017 - Mar 2018",
+          summary:
+            "Green field application development for aviation management",
+          projectStyle: "Agile",
+          testTech: ["Jest", "Nunit", "MoQ", "Jasmine"],
+          technologies: [
+            { isBackEnd: true, text: "Web API" },
+            { isBackEnd: true, text: "SQL Server" },
+            { isBackEnd: true, text: "Autofac" },
+            { isBackEnd: true, text: "Entity Framework" },
+            { isBackEnd: true, text: "Dapper" },
+            { isBackEnd: true, text: ".Net Core" },
+            {
+              isBackEnd: false,
+              text: "Angular 5",
+              link: "http://angular.glennpacker.net/"
+            },
+            {
+              isBackEnd: false,
+              text: "Vue Js",
+              link: "//vuejs.glennpacker.net/"
+            },
+            { isBackEnd: false, text: "Vuetify" },
+            { isBackEnd: false, text: "JSON" },
+            { isBackEnd: false, text: "CSS" },
+            { isBackEnd: false, text: "Material Design" },
+            { isBackEnd: false, text: "Bootstrap" },
+            { isBackEnd: false, text: "JavaScript" }
+          ]
+        },
+        {
+          name: "Movement Statgies/Telephonica",
+          jobTitle: "Full Stack Developer",
+          when: "Jun - Aug 2017",
+          projectStyle: "Agile",
+          summary:
+            "Make a single tenant application (Movement Strategies) suitable for multiple clients with a variety of client specific options",
+          testTech: ["NUnit", "Moq", "Jasmine"],
+          technologies: [
+            {
+              isBackEnd: false,
+              text: "Angular Js",
+              link: "//angular.glennpacker.net/"
+            },
+            { isBackEnd: false, text: "JSON" },
+            { isBackEnd: true, text: "Web Api 2" },
+            { isBackEnd: true, text: "Dynamo DB" },
+            { isBackEnd: true, text: "AWS" },
+            { isBackEnd: false, text: "JavaScript" },
+            { isBackEnd: false, text: "CSS" },
+            { isBackEnd: false, text: "Bootstrap" },
+            { isBackEnd: false, text: "HTML 5" },
+            { isBackEnd: true, text: "Autofac" },
+            { isBackEnd: true, text: "Fluent Validations" },
+            { isBackEnd: true, text: "Express Mapper" },
+            { isBackEnd: true, text: "NLog" },
+            { text: "MOQ" },
+            { text: "NUnit" }
+          ]
+        },
+        {
+          name: "Great Night Out",
+          jobTitle: "Full Stack Developer",
+          when: "Jun 2013 - Jan 2018",
+          summary: "Green field application development for event planning",
+          projectStyle: "Agile",
+          testTech: ["NUnit", "Fake It Easy"],
+          technologies: [
+            {
+              text: "Angular Js",
+              isBackEnd: false,
+              link: "//angular.glennpacker.net/"
+            },
+            { text: "JSON", isBackEnd: false },
+            { isBackEnd: true, text: "Web Api 2" },
+            { isBackEnd: true, text: "SQL Server" },
+            { isBackEnd: false, text: "JavaScript" },
+            { isBackEnd: false, text: "CSS" },
+            { isBackEnd: false, text: "Bootstrap" },
+            { text: "HTML 5", isBackEnd: false },
+            { isBackEnd: true, text: "Unity" },
+            { text: "Fake It Easy" },
+            { text: "NUnit" }
+          ]
+        },
+        {
+          name: "Lumesse",
+          jobTitle: "Front end developer",
+          projectStyle: "Agile",
+          when: "April - May 2017",
+          summary:
+            "Front end development for the Sony, Panasonic and Ey Learning portals",
+          technologies: [
+            {
+              text: "Vue Js",
+              link: "//vuejs.glennpacker.net",
+              isBackEnd: false
+            },
+            { text: "JavaScript", isBackEnd: false },
+            { text: "JSON", isBackEnd: false },
+            { text: "CSS", isBackEnd: false },
+            { text: "HTML 5", isBackEnd: false },
+            { text: "jQuery", isBackEnd: false }
+          ]
+        },
+        {
+          name: "Airbus Space and Defence",
+          jobTitle: "Full Stack Developer",
+          projectStyle: "Agile",
+          when: "Feb – April 2017",
+          summary:
+            "Full stack development on satelite measurement and recording",
+          testTech: ["MS Test", "MoQ", "Jasmine"],
+          technologies: [
+            { isBackEnd: true, text: "C#" },
+            { isBackEnd: true, text: "ASP.net MVC" },
+            { isBackEnd: true, text: "SQL Server" },
+            { isBackEnd: true, text: "Web Api" },
+            { isBackEnd: true, text: "Dapper" },
+            { text: "XML", isBackEnd: false },
+            { isBackEnd: true, text: "Master Data Services" },
+            { isBackEnd: true, text: "Entity Framework" },
+            { text: "Razor", isBackEnd: true },
+            { text: "TypeScript", isBackEnd: false },
+            { text: "JavaScript", isBackEnd: false },
+            { text: "JQuery", isBackEnd: false },
+            { text: "Bootstrap", isBackEnd: false }
+          ]
+        },
+        {
+          name: "Saga",
+          jobTitle: "Full Stack Developer",
+          projectStyle: "Agile",
+          when: "Mar 2016 – Jan 2017",
+          summary:
+            "Full stack development for insurance renewals, holiday insurance and data viewer",
+          testTech: ["NUnit", "MoQ", "Jasmine"],
+          technologies: [
+            { isBackEnd: true, text: "C#" },
+            { isBackEnd: true, text: "ASP.net MVC" },
+            { isBackEnd: true, text: "Oracle" },
+            { isBackEnd: true, text: "SQL Server" },
+            { isBackEnd: true, text: "Dapper" },
+            { isBackEnd: true, text: "Ninject" },
+            {
+              text: "Angular Js",
+              link: "//angular.glennpacker.net",
+              isBackEnd: false
+            },
+            { isBackEnd: true, text: "Web API" },
+            { text: "HTML 5", isBackEnd: false },
+            { text: "Bootstrap", isBackEnd: false },
+            { text: "Razor", isBackEnd: false },
+            { text: "LESS", isBackEnd: false },
+            { text: "CSS", isBackEnd: false },
+            { text: "JavaScript", isBackEnd: false },
+            { text: "jQuery", isBackEnd: false }
+          ]
+        },
+        {
+          name: "Access Group",
+          jobTitle: "Full Stack Developer",
+          projectStyle: "Agile",
+          when: "Nov 2015 – Mar 2016",
+          summary:
+            "Adding new features into a scheduling system for the care industry (Mail Merge, APIs and data exports)",
+          technologies: [
+            { isBackEnd: true, text: "VB.net" },
+            { isBackEnd: true, text: "Asp.net Web Forms" },
+            { isBackEnd: true, text: "SQL Server" },
+            {
+              isBackEnd: false,
+              text: "Angular Js",
+              link: "//angular.glennpacker.net"
+            }
+          ]
+        },
+        {
+          name: "BeValued",
+          jobTitle: "Full Stack Developer",
+          projectStyle: "Agile",
+          when: "Apr 2014 – Nov 2015",
+          summary:
+            "Design and development of a fitting centre portal for the insurance claims industry.",
+          testTech: ["NUnit", "FakeItEasy"],
+          technologies: [
+            { isBackEnd: true, text: "C#" },
+            { isBackEnd: true, text: "Web Api 2" },
+            { isBackEnd: true, text: "MVC4" },
+            {
+              text: "Angular Js",
+              link: "//angular.glennpacker.net/",
+              isBackEnd: false
+            },
+            { isBackEnd: true, text: "Entity Framework" },
+            { isBackEnd: true, text: "nHibernate" },
+            { isBackEnd: true, text: "StructureMap" },
+            { isBackEnd: true, text: "Ninject" },
+            { isBackEnd: true, text: "Autofac" },
+            { isBackEnd: true, text: "NServicebus" },
+            { isBackEnd: true, text: "SQL Server" },
+            { isBackEnd: true, text: "Log4net" },
+            { isBackEnd: true, text: "NLog" },
+            { text: "HTML 5", isBackEnd: false },
+            { text: "JavaScript", isBackEnd: false },
+            { text: "JQuery", isBackEnd: false },
+            { text: "CSS", isBackEnd: false },
+            { text: "Underscore Js", isBackEnd: false },
+            { isBackEnd: false, text: "Razor" },
+            { text: "Bootstrap", isBackEnd: false },
+            { text: "NuGet", isBackEnd: true },
+            { text: "JSON", isBackEnd: false },
+            { isBackEnd: true, text: "Classic Asp" }
+          ]
+        }
+      ]
     };
+  },
+  computed: {
+    vueClients() {
+      return this.clients.filter(client =>
+        client.technologies.some(t => t.text.toLowerCase().includes("vue"))
+      );
+    }
+  },
+  methods: {
+    backEndItems(client) {
+      const items = client.technologies.filter(r => r.isBackEnd && !r.link);
+      return items.map(item => item.text).join(", ");
+    },
+    backEndLinks(client) {
+      return client.technologies.filter(r => r.isBackEnd && r.link);
+    },
+    frontEndItems(client) {
+      const items = client.technologies.filter(r => !r.isBackEnd && !r.link);
+      return items.map(item => item.text).join(", ");
+    },
+    frontEndLinks(client) {
+      return client.technologies.filter(r => !r.isBackEnd && r.link);
+    },
+    hasBackEnd(client) {
+      return client.technologies.some(r => r.isBackEnd);
+    },
+    hasFrontEnd(client) {
+      return client.technologies.some(r => !r.isBackEnd);
+    }
   }
 };
 </script>
@@ -320,5 +410,8 @@ export default {
 ul {
   padding: 16px;
   padding-left: 30px;
+}
+dt {
+  font-weight: 600;
 }
 </style>

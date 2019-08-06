@@ -1,14 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-      color="#1e90ff"
-      dark
-    >
+    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
       <v-list>
         <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
           <v-list-item-action>
@@ -23,6 +15,9 @@
     <v-app-bar color="#1e90ff" dark :clipped-left="clipped" fixed app>
       <v-toolbar-title v-text="title" @click="$router.push('/')" />
       <v-spacer />
+      <v-btn icon @click="$router.push('/contact')">
+        <v-icon>mdi-email</v-icon>
+      </v-btn>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -30,7 +25,15 @@
       </v-container>
     </v-content>
     <v-footer color="#1e90ff" :fixed="fixed" app dark>
-      <span>&copy; 2019</span>
+      <v-icon class="pr-3">mdi-phone</v-icon>07568400965
+      <v-icon class="pr-3 pl-3">mdi-email</v-icon>GlennPacker@GlennPacker.net
+      <v-spacer />
+      <a href="//www.linkedin.com/in/glenn-packer-10718622" target="_blank" class="icon-link">
+        <v-icon>mdi-linkedin</v-icon>
+      </a>
+      <a class="icon-link" href="//github.com/GlennPacker" target="_blank">
+        <v-icon>mdi-github-circle</v-icon>
+      </a>
     </v-footer>
   </v-app>
 </template>
@@ -102,3 +105,15 @@ export default {
   }
 };
 </script>
+<style>
+.v-toolbar__title {
+  cursor: pointer;
+}
+
+.icon-link {
+  text-decoration: none;
+}
+</style>
+
+
+

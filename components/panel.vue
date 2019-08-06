@@ -1,5 +1,5 @@
 <template>
-  <v-flex xs3 ml-2 mr-2>
+  <v-flex sm4 pl-2 pr-2>
     <v-toolbar :color="color" @click="show =! show">
       <slot name="header"></slot>
       <v-spacer></v-spacer>

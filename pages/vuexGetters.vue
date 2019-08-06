@@ -1,51 +1,46 @@
 <template>
-    <v-container>
-        <h3>Vuex - Getters</h3>
-        <code>
-            import Vue from 'vue'<br/>
-            import Vuex from 'vuex'<br/>
-            <br/>
-            Vue.use(Vuex)<br/>
-            <br/>
-            const state = {<br/>
-            &nbsp; someParam: false<br/>
-            }<br/>
-            <br/>
-            const store = new Vuex.Store({<br/>
-                &nbsp; state,<br/>
-                &nbsp; getters:{<br/>
-                    &nbsp; &nbsp; someParam: (state) => {<br/>
-                        &nbsp; &nbsp; &nbsp; return state.someParam;<br/>
-                    &nbsp; &nbsp; }<br/>
-                &nbsp; }<br/>
-            })<br/>
-        </code>
-        <p>
-            Mapping Getters on the component
-        </p>
-        <code>
-            import { mapGetters } from 'vuex'<br/>
-            export default {<br/>
-                &nbsp; computed:{<br/>
-                    &nbsp; &nbsp; ...mapGetters(['someParam'])<br/>
-                &nbsp;  }<br/>
-            }<br/>
-        </code>
-    </v-container>
+  <v-container>
+    <h3>Vuex - Getters</h3>
+    <code>
+      import Vue from 'vue'
+      import Vuex from 'vuex'
+      Vue.use(Vuex)
+      const state = {
+      &nbsp; someParam: false
+      }
+      const store = new Vuex.Store({
+      &nbsp; state,
+      &nbsp; getters:{
+      &nbsp; &nbsp; someParam: (state) => {
+      &nbsp; &nbsp; &nbsp; return state.someParam;
+      &nbsp; &nbsp; }
+      &nbsp; }
+      })
+    </code>
+    <p>Mapping Getters on the component</p>
+    <code>
+      import { mapGetters } from 'vuex'
+      export default {
+      &nbsp; computed:{
+      &nbsp; &nbsp; ...mapGetters(['someParam'])
+      &nbsp; }
+      }
+    </code>
+  </v-container>
 </template>
 <script>
-    export default {
-        head() {
-            return {
-                title: "Vuex Getters",
-                meta: [
-                    {
-                    hid: "description",
-                    name: "description",
-                    content: "glennpacker.net vue vuex getters"
-                    }
-                ]
-            };
+export default {
+  head() {
+    return {
+      title: "Vuex Getters",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "glennpacker.net vue vuex getters"
         }
-    }
+      ]
+    };
+  }
+};
 </script>
