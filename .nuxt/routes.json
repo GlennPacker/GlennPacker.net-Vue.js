@@ -1,0 +1,68 @@
+[
+  {
+    "name": "axios",
+    "path": "/axios",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\axios.vue",
+    "chunkName": "pages/axios"
+  },
+  {
+    "name": "cheatSheet",
+    "path": "/cheatSheet",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\cheatSheet.vue",
+    "chunkName": "pages/cheatSheet"
+  },
+  {
+    "name": "client",
+    "path": "/client",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\client.vue",
+    "chunkName": "pages/client"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact"
+  },
+  {
+    "name": "eventBus",
+    "path": "/eventBus",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\eventBus.vue",
+    "chunkName": "pages/eventBus"
+  },
+  {
+    "name": "routing",
+    "path": "/routing",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\routing.vue",
+    "chunkName": "pages/routing"
+  },
+  {
+    "name": "VueBasics",
+    "path": "/VueBasics",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\VueBasics.vue",
+    "chunkName": "pages/VueBasics"
+  },
+  {
+    "name": "vuexActions",
+    "path": "/vuexActions",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexActions.vue",
+    "chunkName": "pages/vuexActions"
+  },
+  {
+    "name": "vuexGetters",
+    "path": "/vuexGetters",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexGetters.vue",
+    "chunkName": "pages/vuexGetters"
+  },
+  {
+    "name": "vuexSetup",
+    "path": "/vuexSetup",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexSetup.vue",
+    "chunkName": "pages/vuexSetup"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
