@@ -19,11 +19,11 @@
         <v-icon>mdi-email</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <v-container>
         <nuxt />
       </v-container>
-    </v-content>
+    </v-main>
     <v-footer color="#1e90ff" :fixed="fixed" app dark>
       <v-icon class="pr-3">mdi-phone</v-icon>07568400965
       <v-icon class="pr-3 pl-3">mdi-email</v-icon>GlennPacker@GlennPacker.net
