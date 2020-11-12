@@ -40,14 +40,10 @@
   </v-container>
 </template>
 <script>
-import DisplayCode from '../components/displayCode.vue';
 import { basicComponent } from '../codeSnippets';
 
 export default {
     name: "componentBasics",
-    components: {
-        DisplayCode
-    },
     data() {
         return {
             basicComponent
