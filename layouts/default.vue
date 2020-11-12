@@ -67,11 +67,6 @@ export default {
           to: "/eventbus"
         },
         {
-          icon: "mdi-database-refresh",
-          title: "Axios",
-          to: "/axios"
-        },
-        {
           icon: "mdi-check-all",
           title: "Cheat Sheet",
           to: "/cheatsheet"

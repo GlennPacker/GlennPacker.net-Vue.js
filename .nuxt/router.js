@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _13ff3a49 = () => interopDefault(import('..\\pages\\axios.vue' /* webpackChunkName: "pages/axios" */))
 const _0d3c4789 = () => interopDefault(import('..\\pages\\cheatSheet.vue' /* webpackChunkName: "pages/cheatSheet" */))
 const _4b78ea08 = () => interopDefault(import('..\\pages\\client.vue' /* webpackChunkName: "pages/client" */))
 const _330eca33 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
@@ -32,10 +31,6 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
-    path: "/axios",
-    component: _13ff3a49,
-    name: "axios"
-  }, {
     path: "/cheatSheet",
     component: _0d3c4789,
     name: "cheatSheet"
