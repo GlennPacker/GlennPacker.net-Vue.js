@@ -3,66 +3,13 @@
     <h3>Components</h3>
     <p>The basic component framework</p>
 
-    <v-container layout row>
-      <v-flex xs6>
-        <code>
-          <div>
-            import Vue from 'vue';
-            import template from './template.html';
-            import anotherComponent from
-            &nbsp; '../anothercomponent/anothercomponent'
-            <br />
-            export default {
-            &nbsp; mixins: [aMixin],
-            &nbsp; components: {
-            &nbsp; &nbsp; anotherComponent
-            &nbsp; }
-            &nbsp; template,
-            &nbsp; props: {
-            &nbsp; &nbsp; A: String/Number/Object,
-            &nbsp; &nbsp; B: [String, Number],
-            &nbsp; &nbsp; C: {
-            &nbsp; &nbsp; &nbsp; type: String,
-            &nbsp; &nbsp; &nbsp; default: 'foo'
-            &nbsp; &nbsp; },
-            &nbsp; },
-            &nbsp; data(){
-            &nbsp; &nbsp; return {
-            &nbsp; &nbsp; &nbsp; message: 'hi',
-            &nbsp; &nbsp; &nbsp; basicObject: { message: 'foo'}
-            &nbsp; &nbsp; }
-            &nbsp; },
-            &nbsp; methods:{
-            &nbsp; &nbsp; talk(){
-            &nbsp; &nbsp; &nbsp; console.write(this.message);
-            &nbsp; &nbsp; }
-            &nbsp; },
-            &nbsp; computed: {
-            &nbsp; &nbsp; aComputedProperty: function(){
-            &nbsp; &nbsp; &nbsp; return this.message + 'there';
-            &nbsp; &nbsp; }
-            &nbsp; },
-            &nbsp; watch: {
-            &nbsp; &nbsp; message:
-            &nbsp; &nbsp; &nbsp; function(newVal, oldVal) {
-            &nbsp; &nbsp; &nbsp; &nbsp; console.log('new value' + newVal);
-            &nbsp; &nbsp; },
-            &nbsp; &nbsp; 'basicObject.message':
-            &nbsp; &nbsp; &nbsp; function (newVal,OldVal){
-            &nbsp; &nbsp; &nbsp; &nbsp; console.log('property of an object');
-            &nbsp; &nbsp; }
-            &nbsp; },
-            &nbsp; created: function () {
-            &nbsp; &nbsp; console.log('component created);
-            &nbsp; },
-            &nbsp; mounted: function () {
-            &nbsp; &nbsp; console.log('component mounted);
-            &nbsp; },
-            };
-          </div>
-        </code>
-      </v-flex>
-      <v-flex xs6>
+    <v-container class="d-flex flex-row justify-start">
+      <v-container>
+        <display-code
+            :code="basicComponent"
+        />
+      </v-container>
+      <v-container>
         <h4>Imports</h4>
         <p>Other files that this component needs. If it is a component that is common use throughout the application it is better to put it in main.js. If using Nuxt the reference is made automatically by put it in the component folder.</p>
         <h4>Template</h4>
@@ -88,12 +35,24 @@
         </p>
         <h4>Mounted</h4>
         <p>This is part of the page life cyle where the DOM is added. This should not be used for fetching data.</p>
-      </v-flex>
+      </v-container>
     </v-container>
   </v-container>
 </template>
 <script>
+import DisplayCode from '../components/displayCode.vue';
+import { basicComponent } from '../codeSnippets';
+
 export default {
-  name: "componentBasics"
+    name: "componentBasics",
+    components: {
+        DisplayCode
+    },
+    data() {
+        return {
+            basicComponent
+        }
+    },
 };
+
 </script>
