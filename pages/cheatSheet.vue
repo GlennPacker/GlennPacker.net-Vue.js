@@ -85,7 +85,7 @@
 </template>
 
 <script>
-import lazyBind from "../components/LazyBind.vue";
+import lazyBind from  "../components/lazyBind.vue";
 
 export default {
   data() {
