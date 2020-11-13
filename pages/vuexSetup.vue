@@ -2,32 +2,15 @@
   <v-container layout column>
     <h3>State Management (Vuex)</h3>
     <v-flex>Install vuex via npm.</v-flex>
-    <code class="pt-2 pb-2">npm install vuex --save</code>
+    <display-code :code="vuex1" oneLiner="true" />
 
     <v-flex class="pt-2">Create a Vuex component.</v-flex>
-    <code>
-      import Vue from 'vue'
-      import Vuex from 'vuex'
-      Vue.use(Vuex)
-      const state = {
-      &nbsp; someParam : false
-      }
-      // create the store and add the json state object
-      const store = new Vuex.Store({
-      &nbsp; state
-      })
-      export default store
-    </code>
+    <display-code :code="vuex2" />
 
-    <v-flex class="pt-2">Register the store with the root main app.js</v-flex>
-    <code>
-      import Vue from 'vue'
-      import store from './vuex/index.js'
-      const app = new Vue({
-      &nbsp; store
-      })
-      export { app, store }
-    </code>
+    <v-flex class="pt-2">
+        Register the store with the root main app.js
+    </v-flex>
+    <display-code :code="vuex3"  />
 
     <v-flex class="pt-2">Simple data i/o</v-flex>
     <code>
@@ -37,18 +20,26 @@
   </v-container>
 </template>
 <script>
+import { vuex1, vuex2, vuex3 } from '../codeSnippets'
 export default {
-  head() {
-    return {
-      title: "Vuex",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: "glennpacker.net vue vuex"
+    data() {
+        return {
+            vuex1,
+            vuex2,
+            vuex3
         }
-      ]
-    };
-  }
+    },
+    head() {
+        return {
+            title: "Vuex",
+            meta: [
+                {
+                    hid: "description",
+                    name: "description",
+                    content: "glennpacker.net vue vuex"
+                }
+            ]
+        };
+    }
 };
 </script>

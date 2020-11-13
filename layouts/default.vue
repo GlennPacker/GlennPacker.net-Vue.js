@@ -47,7 +47,7 @@ export default {
       fixed: false,
       items: [
         {
-          icon: "mdi-account-card-details",
+          icon: "mdi-domain",
           title: "Clients",
           to: "/client"
         },

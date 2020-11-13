@@ -1,6 +1,6 @@
 <template>
   <v-flex sm4 pl-2 pr-2>
-    <v-toolbar :color="color" @click="show =! show">
+    <v-toolbar :color="color" @click="show =! show" class="heading">
       <slot name="header"></slot>
       <v-spacer></v-spacer>
       <v-icon dark>mdi-menu</v-icon>
@@ -38,3 +38,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+.heading {
+    font-weight: 300;
+    color: white !important;
+    font-size: 1.3em;
+}
+</style>

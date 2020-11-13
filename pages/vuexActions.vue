@@ -1,62 +1,33 @@
 <template>
   <v-container>
     <h3>Vuex - Actions</h3>
-    <code>
-      import Vue from 'vue'
-      import Vuex from 'vuex'
-      Vue.use(Vuex)
-      const state = {
-      &nbsp; someParam: false
-      }
-      const store = new Vuex.Store({
-      &nbsp; state,
-      &nbsp; getters:{
-      &nbsp; &nbsp; someParam: (state) => {
-      &nbsp; &nbsp; &nbsp; return state.someParam;
-      &nbsp; &nbsp; }
-      &nbsp; },
-      &nbsp; actions:{
-      &nbsp; &nbsp; updateSomeParam(context) {
-      &nbsp; &nbsp; &nbsp; context.commit('updateSomeParam')
-      &nbsp; &nbsp; }
-      &nbsp; },
-      &nbsp; mutations:{
-      &nbsp; &nbsp; updateSomeParam(state) {
-      &nbsp; &nbsp; &nbsp; state.someParam = false;
-      &nbsp; &nbsp; }
-      &nbsp; },
-      })
-    </code>
+    <display-code :code="vuexActions1" />
 
     <p>Calling Actions &amp; Mutations</p>
-    <code>
-      import { mapGetters, mapActions } from 'vuex'
-      export default {
-      &nbsp; methods:{
-      &nbsp; &nbsp; ...mapActions({
-      &nbsp; &nbsp; &nbsp; updateSomeParam: 'updateSomeParam'
-      &nbsp; &nbsp; })
-      &nbsp; },
-      &nbsp; computed:{
-      &nbsp; &nbsp; ...mapGetters(['someParam'])
-      &nbsp; }
-      }
-    </code>
+    <display-code :code="vuexActions2" />
   </v-container>
 </template>
 <script>
+import { vuexActions1, vuexActions2 } from '../codeSnippets'
+
 export default {
-  head() {
-    return {
-      title: "Vuex Actions",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: "glennpacker.net vue vuex actions"
+    data() {
+        return {
+            vuexActions1,
+            vuexActions2
         }
-      ]
-    };
-  }
+    },
+    head() {
+        return {
+        title: "Vuex Actions",
+        meta: [
+            {
+            hid: "description",
+            name: "description",
+            content: "glennpacker.net vue vuex actions"
+            }
+        ]
+        };
+    }
 };
 </script>
