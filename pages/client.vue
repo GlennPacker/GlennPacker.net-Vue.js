@@ -123,10 +123,132 @@ export default {
           showC9: false
         }
       },
-      clients: [
+      clients: [{
+          name: "Ultra TDS",
+          jobTitle: "React Developer",
+          when: "Sept 2020 - Oct 2020",
+          summary: "Green field software development of a fleet management reporting system",
+          projectStyle: "Agile",
+          technologies: [
+            {
+              text: "React (React Hooks, Redux, React Router)",
+              isBackEnd: false,
+              link: "//react.glennpacker.net"
+            }, {
+              text: "JavaScript, SAAS, HTML",
+              isBackEnd: false,
+            }, {
+              text: "SAAS",
+              isBackEnd: false,
+            }, {
+              text: "HTML",
+              isBackEnd: false,
+            },
+          ]
+        }, {
+          name: "Click Databases",
+          jobTitle: "Senior Full Stack Developer",
+          when: "May 2019 - Sept 2020",
+          summary: "Responsive design and development",
+          projectStyle: "Agile",
+          technologies: [
+            {
+              text: "ASP.net Web Api",
+              isBackEnd: true,
+            }, {
+              text: "C#",
+              isBackEnd: true,
+            }, {
+              text: ".net and .net core",
+              isBackEnd: true,
+            }, {
+              text: "SQL",
+              isBackEnd: true,
+            }, {
+              text: "SQL Server",
+              isBackEnd: true,
+            }, {
+              text: "ASP.net MVC",
+              isBackEnd: true,
+            }, {
+              text: "Angular 7-9",
+              isBackEnd: false,
+              link: "//angular.glennpacker.net"
+            }, {
+              text: "Angular Js",
+              link: "//glennpacker.net",
+              isBackEnd: false,
+            }, {
+              text: "NgRX",
+              isBackEnd: false,
+            }, {
+              text: "RxJs",
+              isBackEnd: false,
+            }, {
+              text: "JavaScript",
+              isBackEnd: false,
+            }, {
+              text: "TypeScript",
+              isBackEnd: false,
+            }, {
+              text: "SASS",
+              isBackEnd: false,
+            }, {
+              text: "Html",
+              isBackEnd: false,
+            }, {
+              text: "ngx-translate",
+              isBackEnd: false,
+            }, {
+              text: "Razor",
+              isBackEnd: false,
+            }
+          ]
+        },
+        {
+          name: "The Gym Group",
+          jobTitle: "Senior Full Stack Developer",
+          when: "May 2019 - Oct 2019",
+          summary: "Responsive design and development",
+          projectStyle: "Agile",
+          technologies: [
+            {
+              text: "ASP.net MVC",
+              isBackEnd: true,
+            }, {
+              text: "Web Api",
+              isBackEnd: true,
+            }, {
+              text: "C#",
+              isBackEnd: true,
+            }, {
+              text: "EpiServer",
+              isBackEnd: true,
+            }, {
+              text: "SQL",
+              isBackEnd: true,
+            }, {
+              text: "Vue",
+              isBackEnd: false,
+              link: "//vuejs.glennpacker.net"
+            }, {
+              text: "JavaScript",
+              isBackEnd: false,
+            }, {
+              text: "CSS",
+              isBackEnd: false,
+            }, {
+              text: "Html",
+              isBackEnd: false,
+            }, {
+              text: "Sass",
+              isBackEnd: false,
+            }
+          ]
+        },
         {
           name: "Hastings Direct",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           when: "May 2019 - Present",
           summary: "Application development for the insurance industry.",
           projectStyle: "Agile",
@@ -156,7 +278,7 @@ export default {
         },
         {
           name: "Airops Software",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           when: "Aug 2017 - Mar 2018",
           summary:
             "Green field application development for aviation management",
@@ -189,7 +311,7 @@ export default {
         },
         {
           name: "Movement Statgies/Telephonica",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           when: "Jun - Aug 2017",
           projectStyle: "Agile",
           summary:
@@ -219,7 +341,7 @@ export default {
         },
         {
           name: "Great Night Out",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           when: "Jun 2013 - Jan 2018",
           summary: "Green field application development for event planning",
           projectStyle: "Agile",
@@ -264,7 +386,7 @@ export default {
         },
         {
           name: "Airbus Space and Defence",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           projectStyle: "Agile",
           when: "Feb – April 2017",
           summary:
@@ -288,7 +410,7 @@ export default {
         },
         {
           name: "Saga",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           projectStyle: "Agile",
           when: "Mar 2016 – Jan 2017",
           summary:
@@ -318,7 +440,7 @@ export default {
         },
         {
           name: "Access Group",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           projectStyle: "Agile",
           when: "Nov 2015 – Mar 2016",
           summary:
@@ -336,7 +458,7 @@ export default {
         },
         {
           name: "BeValued",
-          jobTitle: "Full Stack Developer",
+          jobTitle: "Senior Full Stack Developer",
           projectStyle: "Agile",
           when: "Apr 2014 – Nov 2015",
           summary:

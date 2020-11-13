@@ -1,68 +1,72 @@
 [
   {
-    "name": "axios",
-    "path": "/axios",
-    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\axios.vue",
-    "chunkName": "pages/axios"
-  },
-  {
     "name": "cheatSheet",
     "path": "/cheatSheet",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\cheatSheet.vue",
-    "chunkName": "pages/cheatSheet"
+    "chunkName": "pages/cheatSheet",
+    "_name": "_0d3c4789"
   },
   {
     "name": "client",
     "path": "/client",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\client.vue",
-    "chunkName": "pages/client"
+    "chunkName": "pages/client",
+    "_name": "_4b78ea08"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact"
+    "chunkName": "pages/contact",
+    "_name": "_330eca33"
   },
   {
     "name": "eventBus",
     "path": "/eventBus",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\eventBus.vue",
-    "chunkName": "pages/eventBus"
+    "chunkName": "pages/eventBus",
+    "_name": "_29a84103"
   },
   {
     "name": "routing",
     "path": "/routing",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\routing.vue",
-    "chunkName": "pages/routing"
+    "chunkName": "pages/routing",
+    "_name": "_98d7784e"
   },
   {
     "name": "VueBasics",
     "path": "/VueBasics",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\VueBasics.vue",
-    "chunkName": "pages/VueBasics"
+    "chunkName": "pages/VueBasics",
+    "_name": "_5bfa10de"
   },
   {
     "name": "vuexActions",
     "path": "/vuexActions",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexActions.vue",
-    "chunkName": "pages/vuexActions"
+    "chunkName": "pages/vuexActions",
+    "_name": "_b2064004"
   },
   {
     "name": "vuexGetters",
     "path": "/vuexGetters",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexGetters.vue",
-    "chunkName": "pages/vuexGetters"
+    "chunkName": "pages/vuexGetters",
+    "_name": "_796df249"
   },
   {
     "name": "vuexSetup",
     "path": "/vuexSetup",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexSetup.vue",
-    "chunkName": "pages/vuexSetup"
+    "chunkName": "pages/vuexSetup",
+    "_name": "_4e3bb7be"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_e3e46eb6"
   }
 ]

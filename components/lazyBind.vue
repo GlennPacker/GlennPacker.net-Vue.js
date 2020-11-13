@@ -4,7 +4,7 @@
     <v-container layout row>
       <v-flex xs6>
         <p>This will only bind the value on lossing focus similar to onChange. This will stop mulitple hits on the api or function after every char is typed.</p>
-        <code>v-model.lazy="someparam"</code>
+        <display-code :code="lazyCode" oneLiner="true" />
       </v-flex>
       <v-flex xs6>
         <v-text-field
@@ -25,10 +25,11 @@
 </template>
 <script>
 export default {
-  name: "lazy-bind",
+  name: 'lazy-bind',
   data() {
     return {
-      lazyVar: null
+      lazyVar: null,
+      lazyCode: `v-model.lazy="someparam"`
     };
   }
 };

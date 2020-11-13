@@ -15,7 +15,7 @@
       <v-container layout row>
         <v-flex xs6>
           <p>This trims any extra white space from the model.</p>
-          <code>v-model.trim="someparam"</code>
+          <display-code :code="trimCode" oneLiner="true" />
         </v-flex>
         <v-flex xs6>
           <v-text-field
@@ -36,7 +36,7 @@
       <v-container layout row>
         <v-flex xs6>
           <p>This attempts to convert the parameter to a number instead of the default string. Will only parse if the first char is a number.</p>
-          <code>v-model.number="someparam"</code>
+          <display-code :code="numberCode" oneLiner="true" />
         </v-flex>
         <v-flex xs6>
           <v-text-field
@@ -85,20 +85,19 @@
 </template>
 
 <script>
-import lazyBind from "../components/LazyBind.vue";
-
+import displayCode from '../components/displayCode.vue';
 export default {
+  components: { displayCode },
   data() {
     return {
       trim: null,
+      trimCode: `v-model.trim="someparam"`,
+      numberCode: `v-model.number="someparam"`,
       testNo: null,
       modifyingBound: false,
       performance: false,
       someVar: "{{someVar}}"
     };
-  },
-  components: {
-    lazyBind
   },
   head() {
     return {

@@ -47,7 +47,7 @@ export default {
       fixed: false,
       items: [
         {
-          icon: "mdi-account-card-details",
+          icon: "mdi-domain",
           title: "Clients",
           to: "/client"
         },
@@ -65,11 +65,6 @@ export default {
           icon: "mdi-bus",
           title: "Event Bus",
           to: "/eventbus"
-        },
-        {
-          icon: "mdi-database-refresh",
-          title: "Axios",
-          to: "/axios"
         },
         {
           icon: "mdi-check-all",

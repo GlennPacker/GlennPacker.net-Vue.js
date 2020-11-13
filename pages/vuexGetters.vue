@@ -1,35 +1,23 @@
 <template>
   <v-container>
     <h3>Vuex - Getters</h3>
-    <code>
-      import Vue from 'vue'
-      import Vuex from 'vuex'
-      Vue.use(Vuex)
-      const state = {
-      &nbsp; someParam: false
-      }
-      const store = new Vuex.Store({
-      &nbsp; state,
-      &nbsp; getters:{
-      &nbsp; &nbsp; someParam: (state) => {
-      &nbsp; &nbsp; &nbsp; return state.someParam;
-      &nbsp; &nbsp; }
-      &nbsp; }
-      })
-    </code>
+    <display-code :code="vuexGetters1" />
+
     <p>Mapping Getters on the component</p>
-    <code>
-      import { mapGetters } from 'vuex'
-      export default {
-      &nbsp; computed:{
-      &nbsp; &nbsp; ...mapGetters(['someParam'])
-      &nbsp; }
-      }
-    </code>
+    <display-code :code="vuexGetters2" />
+
   </v-container>
 </template>
 <script>
+import { vuexGetters1, vuexGetters2 } from '../codeSnippets'
+
 export default {
+    data() {
+        return {
+            vuexGetters1,
+            vuexGetters2
+        }
+    },
   head() {
     return {
       title: "Vuex Getters",
