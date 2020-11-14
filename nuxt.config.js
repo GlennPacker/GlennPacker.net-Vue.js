@@ -26,7 +26,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+   'vue-prism-editor/dist/prismeditor.min.css',
+   'prismjs/themes/prism-tomorrow.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */

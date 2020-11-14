@@ -28,11 +28,11 @@
     "_name": "_29a84103"
   },
   {
-    "name": "routing",
-    "path": "/routing",
-    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\routing.vue",
-    "chunkName": "pages/routing",
-    "_name": "_98d7784e"
+    "name": "Routing",
+    "path": "/Routing",
+    "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\Routing.vue",
+    "chunkName": "pages/Routing",
+    "_name": "_16fdebb9"
   },
   {
     "name": "VueBasics",
