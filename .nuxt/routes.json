@@ -3,70 +3,60 @@
     "name": "cheatSheet",
     "path": "/cheatSheet",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\cheatSheet.vue",
-    "chunkName": "pages/cheatSheet",
-    "_name": "_0d3c4789"
+    "chunkName": "pages/cheatSheet"
   },
   {
     "name": "client",
     "path": "/client",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\client.vue",
-    "chunkName": "pages/client",
-    "_name": "_4b78ea08"
+    "chunkName": "pages/client"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_330eca33"
+    "chunkName": "pages/contact"
   },
   {
     "name": "eventBus",
     "path": "/eventBus",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\eventBus.vue",
-    "chunkName": "pages/eventBus",
-    "_name": "_29a84103"
+    "chunkName": "pages/eventBus"
   },
   {
     "name": "Routing",
     "path": "/Routing",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\Routing.vue",
-    "chunkName": "pages/Routing",
-    "_name": "_16fdebb9"
+    "chunkName": "pages/Routing"
   },
   {
     "name": "VueBasics",
     "path": "/VueBasics",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\VueBasics.vue",
-    "chunkName": "pages/VueBasics",
-    "_name": "_5bfa10de"
+    "chunkName": "pages/VueBasics"
   },
   {
     "name": "vuexActions",
     "path": "/vuexActions",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexActions.vue",
-    "chunkName": "pages/vuexActions",
-    "_name": "_b2064004"
+    "chunkName": "pages/vuexActions"
   },
   {
     "name": "vuexGetters",
     "path": "/vuexGetters",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexGetters.vue",
-    "chunkName": "pages/vuexGetters",
-    "_name": "_796df249"
+    "chunkName": "pages/vuexGetters"
   },
   {
     "name": "vuexSetup",
     "path": "/vuexSetup",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\vuexSetup.vue",
-    "chunkName": "pages/vuexSetup",
-    "_name": "_4e3bb7be"
+    "chunkName": "pages/vuexSetup"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\dev\\\\tech\\\\vue\\\\VueJSGlennPackerNet\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_e3e46eb6"
+    "chunkName": "pages/index"
   }
 ]
