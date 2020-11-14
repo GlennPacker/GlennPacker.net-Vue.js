@@ -7,7 +7,7 @@
       </v-flex>
       <v-flex xs6 class="pl-3">
         <h4>Using Nuxt Routing</h4>
-        <code>&lt;nuxt-link to="/component">Link Text&lt;/nuxt-link></code>
+        <display-code :code="snippets.routing1" :oneLiner="true" />
       </v-flex>
     </v-layout>
 
@@ -15,41 +15,28 @@
       <v-flex xs6>
         <h3>Vue JS - Example routing</h3>
         <p>The Basic routing table</p>
-        <code>
-          import Home from 'components/Home/home';
-          import Contact from 'components/Contact/contact';
-          import NotFound from 'components/NotFound/notFound';
-          const routes = [
-          &nbsp; {
-          &nbsp; &nbsp; name: 'home',
-          &nbsp; &nbsp; path: '/',
-          &nbsp; &nbsp; component: Home
-          &nbsp; },
-          &nbsp; {
-          &nbsp; &nbsp; name: 'contact',
-          &nbsp; &nbsp; path: '/contact',
-          &nbsp; &nbsp; component: Contact
-          &nbsp; },
-          &nbsp; {
-          &nbsp; &nbsp; path: '*',
-          &nbsp; &nbsp; component: NotFound
-          &nbsp; }
-          ];
-          export default routes;
-        </code>
+        <display-code :code="snippets.routing2" />
       </v-flex>
       <v-flex xs6 class="pl-3">
         <h4>Using the Routing</h4>
 
         <p>simply use the href or alternatively in the code use:</p>
-        <code>$router.push('home');</code>
+            <display-code :code="snippets.routing3" :oneLiner="true" />
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
   name: "routing",
+  computed: {
+      ...mapGetters({ snippets: 'codeSnippet/getRoutingSnippets' }),
+  },
+  methods: {
+      ...mapActions({ loadSnippets: 'codeSnippet/loadRoutingSnippets' })
+  },
   head() {
     return {
       title: "Vue Router",
@@ -61,7 +48,10 @@ export default {
         }
       ]
     };
-  }
+  },
+  created () {
+      this.loadSnippets();
+  },
 };
 </script>
 

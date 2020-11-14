@@ -7,7 +7,7 @@ const _0d3c4789 = () => interopDefault(import('..\\pages\\cheatSheet.vue' /* web
 const _4b78ea08 = () => interopDefault(import('..\\pages\\client.vue' /* webpackChunkName: "pages/client" */))
 const _330eca33 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
 const _29a84103 = () => interopDefault(import('..\\pages\\eventBus.vue' /* webpackChunkName: "pages/eventBus" */))
-const _98d7784e = () => interopDefault(import('..\\pages\\routing.vue' /* webpackChunkName: "pages/routing" */))
+const _16fdebb9 = () => interopDefault(import('..\\pages\\Routing.vue' /* webpackChunkName: "pages/Routing" */))
 const _5bfa10de = () => interopDefault(import('..\\pages\\VueBasics.vue' /* webpackChunkName: "pages/VueBasics" */))
 const _b2064004 = () => interopDefault(import('..\\pages\\vuexActions.vue' /* webpackChunkName: "pages/vuexActions" */))
 const _796df249 = () => interopDefault(import('..\\pages\\vuexGetters.vue' /* webpackChunkName: "pages/vuexGetters" */))
@@ -47,9 +47,9 @@ export const routerOptions = {
     component: _29a84103,
     name: "eventBus"
   }, {
-    path: "/routing",
-    component: _98d7784e,
-    name: "routing"
+    path: "/Routing",
+    component: _16fdebb9,
+    name: "Routing"
   }, {
     path: "/VueBasics",
     component: _5bfa10de,
