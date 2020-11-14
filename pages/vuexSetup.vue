@@ -12,11 +12,6 @@
     </v-flex>
     <display-code :code="vuex3"  />
 
-    <v-flex class="pt-2">Simple data i/o</v-flex>
-    <code>
-      this.$store.state.someParam = true;
-      let foo = this.$store.state.someParam;
-    </code>
   </v-container>
 </template>
 <script>
