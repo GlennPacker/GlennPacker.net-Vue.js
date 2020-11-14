@@ -1,8 +1,8 @@
-import { RouterLinkStub, shallowMount, createLocalVue, mount } from '@vue/test-utils'
-import Routing from '../pages/Routing.vue'
-import Vue from 'vue'
-import Vuetify from 'vuetify'
-import Vuex from 'vuex'
+import { RouterLinkStub, shallowMount, createLocalVue, mount } from '@vue/test-utils';
+import Routing from '../pages/Routing';
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import Vuex from 'vuex';
 
 Vue.use(Vuetify)
 import DisplayCode from '../components/displayCode.vue'
