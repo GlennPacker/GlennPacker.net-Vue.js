@@ -1,0 +1,29 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/Routing.js": "pages/Routing.js",
+    "pages/VueBasics.js": "pages/VueBasics.js",
+    "pages/cheatSheet.js": "pages/cheatSheet.js",
+    "pages/client.js": "pages/client.js",
+    "pages/contact.js": "pages/contact.js",
+    "pages/eventBus.js": "pages/eventBus.js",
+    "pages/index.js": "pages/index.js",
+    "pages/vuexActions.js": "pages/vuexActions.js",
+    "pages/vuexGetters.js": "pages/vuexGetters.js",
+    "pages/vuexSetup.js": "pages/vuexSetup.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/Routing.js": "pages/Routing.js.map",
+    "pages/VueBasics.js": "pages/VueBasics.js.map",
+    "pages/cheatSheet.js": "pages/cheatSheet.js.map",
+    "pages/client.js": "pages/client.js.map",
+    "pages/contact.js": "pages/contact.js.map",
+    "pages/eventBus.js": "pages/eventBus.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/vuexActions.js": "pages/vuexActions.js.map",
+    "pages/vuexGetters.js": "pages/vuexGetters.js.map",
+    "pages/vuexSetup.js": "pages/vuexSetup.js.map",
+    "server.js": "server.js.map"
+  }
+}
