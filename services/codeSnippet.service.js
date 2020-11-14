@@ -25,3 +25,38 @@ export default routes;`,
         });
     })
 }
+
+export const loadEventBusSnippets = () => {
+    return new Promise(function(resolve, reject) {
+        resolve({
+            eventBus1:
+`import Vue from 'vue';
+export const EventBus = new Vue();`,
+            eventBus2:
+`   import { EventBus } from './event-bus.js';
+
+    export default {
+        data() {
+            return {
+                someData: 'payload'
+            }
+        }
+        methods: {
+            sendEvent() {
+                EventBus.$emit('i-got-clicked', this.someData); // i-got-clicked = event name
+            }
+        }
+    }`,
+            eventBus3:
+`   import { EventBus } from './event-bus.js';
+    export default {
+        created() {
+            // Listen for the i-got-clicked event and its data.
+            EventBus.$on('i-got-clicked', data => {
+                console.log(data);
+            });
+        }
+    }`
+        });
+    })
+}

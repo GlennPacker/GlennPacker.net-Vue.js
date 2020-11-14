@@ -1,5 +1,5 @@
 import { RouterLinkStub, shallowMount, createLocalVue, mount } from '@vue/test-utils'
-import Routing from '../pages/Routing.vue'
+import EventBus from '../pages/eventBus.vue'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Vuex from 'vuex'
@@ -11,33 +11,33 @@ Vue.component(DisplayCode.name, DisplayCode);
 const localVue = createLocalVue()
 localVue.use(Vuex)
 
-describe('routing.vue', () => {
+describe('eventBus.vue', () => {
     let store, state;
 
     beforeEach(() => {
         state = {
-            routingSnippets: {}
+            eventBusSnippets: {}
         }
         store = new Vuex.Store({
             modules: {
                 codeSnippet: {
                     namespaced: true,
                     actions: {
-                        loadRoutingSnippets({commit}) {
-                            commit('setRoutingSnippets', {
-                                routing1: 'routing1',
-                                routing2: 'routing2',
-                                routing3: 'routing3'
+                        loadEventBusSnippets({commit}) {
+                            commit('setEventBusSnippets', {
+                                eventBus1: 'eventBus1',
+                                eventBus2: 'eventBus2',
+                                eventBus3: 'eventBus3'
                              });
                         }
                     },
                     getters: {
-                        getRoutingSnippets: state => state.routingSnippets
+                        getEventBusSnippets: state => state.eventBusSnippets
                     },
                     state,
                     mutations: {
-                        setRoutingSnippets(state, data) {
-                            state.routingSnippets = data;
+                        setEventBusSnippets(state, data) {
+                            state.eventBusSnippets = data;
                         }
                     }
                 }
@@ -46,42 +46,30 @@ describe('routing.vue', () => {
     })
 
     test('Smoke Test - check home page renders by looking for some hard coded text', async () => {
-        const wrapper = shallowMount(Routing, {
+        const wrapper = shallowMount(EventBus, {
             stubs: {
                 RouterLink: RouterLinkStub
             },
             store, localVue
         })
 
-        expect(wrapper.find('h3').text()).toContain('Nuxt Routing');
+        expect(wrapper.find('h3').text()).toContain('Event Bus');
     })
 
-    test('routing snippet load call was made on creation', async () => {
-        const wrapper = shallowMount(Routing, {
+    test('eventBus snippet load call was made on creation', async () => {
+        const wrapper = shallowMount(EventBus, {
             stubs: {
                 RouterLink: RouterLinkStub
             },
             store, localVue
         })
 
-        expect(wrapper.find('h3').text()).toContain('Nuxt Routing');
-        expect(Object.keys(state.routingSnippets).length).toBe(3);
+        expect(wrapper.find('h3').text()).toContain('Event Bus');
+        expect(Object.keys(state.eventBusSnippets).length).toBe(3);
     })
 
-    test('routing made use of snippet 1', async () => {
-        const wrapper = mount(Routing, {
-            stubs: {
-                RouterLink: RouterLinkStub
-            },
-            store, localVue
-        })
-
-        await wrapper.vm.$nextTick()
-        expect(wrapper.text()).toContain('routing1');
-    })
-
-    test('routing made use of snippet 2', async () => {
-        const wrapper = mount(Routing, {
+    test('eventBus made use of snippet 1', async () => {
+        const wrapper = mount(EventBus, {
             stubs: {
                 RouterLink: RouterLinkStub
             },
@@ -89,11 +77,11 @@ describe('routing.vue', () => {
         })
 
         await wrapper.vm.$nextTick()
-        expect(wrapper.text()).toContain('routing2');
+        expect(wrapper.text()).toContain('eventBus1');
     })
 
-    test('routing made use of snippet 3', async () => {
-        const wrapper = mount(Routing, {
+    test('eventBus made use of snippet 2', async () => {
+        const wrapper = mount(EventBus, {
             stubs: {
                 RouterLink: RouterLinkStub
             },
@@ -101,11 +89,24 @@ describe('routing.vue', () => {
         })
 
         await wrapper.vm.$nextTick()
-        expect(wrapper.text()).toContain('routing3');
+        expect(wrapper.text()).toContain('eventBus2');
     })
+
+    test('eventBus made use of snippet 3', async () => {
+        const wrapper = mount(EventBus, {
+            stubs: {
+                RouterLink: RouterLinkStub
+            },
+            store, localVue
+        })
+
+        await wrapper.vm.$nextTick()
+        expect(wrapper.text()).toContain('eventBus3');
+    })
+
 
     test('match snapshot', async () => {
-        const wrapper = mount(Routing, {
+        const wrapper = mount(EventBus, {
             stubs: {
                 RouterLink: RouterLinkStub
             },
