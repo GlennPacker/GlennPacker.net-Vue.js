@@ -144,7 +144,7 @@ const loadHistories = () => {
                     text: "SQL",
                     isBackEnd: true,
                 }, {
-                    text: "Vue",
+                    text: "Vue Js",
                     isBackEnd: false,
                     link: "//vuejs.glennpacker.net"
                 }, {
