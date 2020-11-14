@@ -1,5 +1,5 @@
 import { RouterLinkStub, shallowMount, createLocalVue, mount } from '@vue/test-utils';
-import Routing from '../pages/Routing';
+import Routing from '../pages/Routing.vue';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import Vuex from 'vuex';

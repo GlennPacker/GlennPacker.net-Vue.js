@@ -2,27 +2,26 @@
   <v-container layout column>
     <h3>State Management (Vuex)</h3>
     <v-flex>Install vuex via npm.</v-flex>
-    <display-code :code="vuex1" oneLiner="true" />
+    <display-code :code="snippets.vuex1" oneLiner="true" />
 
     <v-flex class="pt-2">Create a Vuex component.</v-flex>
-    <display-code :code="vuex2" />
+    <display-code :code="snippets.vuex2" />
 
     <v-flex class="pt-2">
         Register the store with the root main app.js
     </v-flex>
-    <display-code :code="vuex3"  />
-
+    <display-code :code="snippets.vuex3"  />
   </v-container>
 </template>
 <script>
-import { vuex1, vuex2, vuex3 } from '../codeSnippets'
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
-    data() {
-        return {
-            vuex1,
-            vuex2,
-            vuex3
-        }
+    computed: {
+        ...mapGetters({'snippets': 'codeSnippet/getVuexSetupSnippets'})
+    },
+    methods: {
+        ...mapActions({'loadSnippets': 'codeSnippet/loadVuexSetupSnippets'})
     },
     head() {
         return {
@@ -35,6 +34,9 @@ export default {
                 }
             ]
         };
-    }
+    },
+    created () {
+        this.loadSnippets();
+    },
 };
 </script>

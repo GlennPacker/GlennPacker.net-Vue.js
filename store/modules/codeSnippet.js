@@ -5,12 +5,14 @@ export default {
     state: {
         routingSnippets: {},
         eventBusSnippets: {},
-        vueBasicsSnippets: {}
+        vueBasicsSnippets: {},
+        vuexSetupSnippets: {}
     },
     getters: {
         getRoutingSnippets: state => state.routingSnippets,
         getEventBusSnippets: state => state.eventBusSnippets,
-        getVueBasicsSnippets: state => state.vueBasicsSnippets
+        getVueBasicsSnippets: state => state.vueBasicsSnippets,
+        getVuexSetupSnippets: state => state.vuexSetupSnippets,
     },
     mutations: {
         setRoutingSnippets(state, data) {
@@ -21,7 +23,10 @@ export default {
         },
         setVueBasicsSnippets(state, data) {
             state.vueBasicsSnippets = data;
-        }
+        },
+        setVuexSetupSnippets(state, data) {
+            state.vuexSetupSnippets = data;
+        },
     },
     actions: {
         loadRoutingSnippets({commit}) {
@@ -37,6 +42,11 @@ export default {
         loadVueBasicsSnippets({commit}) {
             codeSnippets.loadVueBasicsSnippets().then(data => {
                 commit('setVueBasicsSnippets', data);
+            })
+        },
+        loadVuexSetupSnippets({commit}) {
+            codeSnippets.loadVuexSetupSnippets().then(data => {
+                commit('setVuexSetupSnippets', data);
             })
         }
     }
