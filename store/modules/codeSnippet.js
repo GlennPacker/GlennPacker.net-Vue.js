@@ -4,11 +4,13 @@ export default {
     namespaced: true,
     state: {
         routingSnippets: {},
-        eventBusSnippets: {}
+        eventBusSnippets: {},
+        vueBasicsSnippets: {}
     },
     getters: {
         getRoutingSnippets: state => state.routingSnippets,
-        getEventBusSnippets: state => state.eventBusSnippets
+        getEventBusSnippets: state => state.eventBusSnippets,
+        getVueBasicsSnippets: state => state.vueBasicsSnippets
     },
     mutations: {
         setRoutingSnippets(state, data) {
@@ -16,6 +18,9 @@ export default {
         },
         setEventBusSnippets(state, data) {
             state.eventBusSnippets = data;
+        },
+        setVueBasicsSnippets(state, data) {
+            state.vueBasicsSnippets = data;
         }
     },
     actions: {
@@ -27,6 +32,11 @@ export default {
         loadEventBusSnippets({commit}) {
             codeSnippets.loadEventBusSnippets().then(data => {
                 commit('setEventBusSnippets', data);
+            })
+        },
+        loadVueBasicsSnippets({commit}) {
+            codeSnippets.loadVueBasicsSnippets().then(data => {
+                commit('setVueBasicsSnippets', data);
             })
         }
     }
