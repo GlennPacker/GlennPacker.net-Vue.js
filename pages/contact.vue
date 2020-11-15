@@ -31,6 +31,7 @@
 
         <div class="col-md-12">
           <v-text-field
+            outlined
             label="Name"
             type="text"
             id="name"
@@ -44,6 +45,7 @@
           />
 
           <v-text-field
+            outlined
             label="Email Address"
             type="email"
             id="from"
@@ -56,8 +58,9 @@
           />
 
           <v-textarea
+            outlined
             label="Message"
-            palceholder="message"
+            palceholder="Message"
             id="message"
             v-model="contact.Message"
             data-vv-rules="required"

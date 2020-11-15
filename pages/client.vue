@@ -98,6 +98,7 @@
   </v-container>
 </template>
 <script>
+import panel from '../components/panel.vue';
 import { mapGetters, mapActions } from "vuex";
 
 export default {
