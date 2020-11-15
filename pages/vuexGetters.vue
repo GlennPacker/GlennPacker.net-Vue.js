@@ -1,34 +1,35 @@
 <template>
   <v-container>
     <h3>Vuex - Getters</h3>
-    <display-code :code="vuexGetters1" />
+    <display-code :code="snippets.vuexGetters1" />
 
     <p>Mapping Getters on the component</p>
-    <display-code :code="vuexGetters2" />
+    <display-code :code="snippets.vuexGetters2" />
 
   </v-container>
 </template>
 <script>
-import { vuexGetters1, vuexGetters2 } from '../codeSnippets'
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
-    data() {
-        return {
-            vuexGetters1,
-            vuexGetters2
-        }
+    computed: {
+        ...mapGetters({'snippets': 'codeSnippet/getVuexGettersSnippets'})
     },
-  head() {
-    return {
-      title: "Vuex Getters",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: "glennpacker.net vue vuex getters"
-        }
-      ]
-    };
-  }
+    methods: {
+        ...mapActions({'loadSnippets': 'codeSnippet/loadVuexGettersSnippets'})
+    },
+    head() {
+        return {
+            meta: [{
+                content: "glennpacker.net vue vuex getters",
+                hid: "description",
+                name: "description"
+            }],
+            title: "Vuex Getters"
+        };
+    },
+    created() {
+        this.loadSnippets();
+    }
 };
 </script>

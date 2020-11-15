@@ -1,7 +1,7 @@
 <template>
   <v-container layout fluid>
     <v-flex md4 hidden-md-and-down pr-5 pl-5 pt-5>
-      <img class="image-circle" src="/images/GlennPacker.jpg" />
+      <img class="image-circle" src="~/assets/GlennPacker.jpg" />
     </v-flex>
     <v-flex md12 pt-5>
       <p>Glenn Packer is a freelance contractor, working as a full-stack developer with experience in many different sectors and technologies including Vue JS.</p>
