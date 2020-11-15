@@ -180,16 +180,50 @@ export const loadVuexActionsSnippets = () => {
 `    import { mapGetters, mapActions } from 'vuex'
     export default {
         methods:{
-            ...mapActions(['updateSomeParam'])
-            ...mapActions({ updateSomeParam: 'updateSomeParam' })
+            ...mapActions(['updateSomeParam']),
+            ...mapActions({ 'updateSomeParam': 'updateSomeParam' }),
             // with namespaces
-            ...mapActions('namespace', ['addRobot','loadParts'])
+            ...mapActions('namespace', ['updateSomeParam','updateSomeParam']),
+            ...mapActions({'updateSomeParam': 'namespace/updateSomeParam'})
         },
         computed:{
-            ...mapGetters(['someParam'])
-            ...mapGetters({'someParam': 'someParam'})
+            ...mapGetters(['someParam']),
+            ...mapGetters({'someParam': 'someParam'}),
             // with namespaces
-            ...mapActions({'someParam', 'namespace/someParam'})
+            ...mapGetters({'someParam', 'namespace/someParam'})
+        }
+    }`
+        });
+    })
+}
+
+export const loadVuexGettersSnippets = () => {
+    return new Promise(function(resolve, reject) {
+        resolve({
+            vuexGetters1:
+`    import Vue from 'vue'
+    import Vuex from 'vuex'
+
+    Vue.use(Vuex)
+        const state = {
+            someParam: false
+        }
+        const store = new Vuex.Store({
+            state,
+            getters:{
+                someParam: state => state.someParam
+            }
+        }
+    })`,
+    vuexGetters2:
+`    import { mapGetters } from 'vuex'
+
+    export default {
+        computed:{
+            ...mapGetters(['someParam']),
+            ...mapGetters({'someParam': 'someParam'}),
+            // with namespaces
+            ...mapGetters({'someParam', 'namespace/someParam'})
         }
     }`
         });
