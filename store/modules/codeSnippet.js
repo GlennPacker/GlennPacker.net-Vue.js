@@ -6,13 +6,15 @@ export default {
         routingSnippets: {},
         eventBusSnippets: {},
         vueBasicsSnippets: {},
-        vuexSetupSnippets: {}
+        vuexSetupSnippets: {},
+        vuexActionsSnippets: {}
     },
     getters: {
-        getRoutingSnippets: state => state.routingSnippets,
         getEventBusSnippets: state => state.eventBusSnippets,
+        getRoutingSnippets: state => state.routingSnippets,
         getVueBasicsSnippets: state => state.vueBasicsSnippets,
-        getVuexSetupSnippets: state => state.vuexSetupSnippets,
+        getVuexActionsSnippets: state => state.vuexActionsSnippets,
+        getVuexSetupSnippets: state => state.vuexSetupSnippets
     },
     mutations: {
         setRoutingSnippets(state, data) {
@@ -23,6 +25,9 @@ export default {
         },
         setVueBasicsSnippets(state, data) {
             state.vueBasicsSnippets = data;
+        },
+        setVuexActionsSnippets(state, data) {
+            state.vuexActionsSnippets = data;
         },
         setVuexSetupSnippets(state, data) {
             state.vuexSetupSnippets = data;
@@ -42,6 +47,11 @@ export default {
         loadVueBasicsSnippets({commit}) {
             codeSnippets.loadVueBasicsSnippets().then(data => {
                 commit('setVueBasicsSnippets', data);
+            })
+        },
+        loadVuexActionsSnippets({commit}) {
+            codeSnippets.loadVuexActionsSnippets().then(data => {
+                commit('setVuexActionsSnippets', data);
             })
         },
         loadVuexSetupSnippets({commit}) {
