@@ -44,7 +44,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "glennpacker.net vue router and routing"
+          content: "GlennPacker.net vue router and routing"
         }
       ]
     };

@@ -115,16 +115,3 @@ describe('routing.vue', () => {
         expect(wrapper.element).toMatchSnapshot()
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
